@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t rinonir/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run rinonir/docker-react npm test -- --coverage
