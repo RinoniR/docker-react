@@ -6,4 +6,4 @@ before_install:
   - docker build -t rinonir/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true rinonir/docker-react npm test --coverage
+  - docker run -e CI=true rinonir/docker-react npm test -- --coverage
